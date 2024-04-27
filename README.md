@@ -50,23 +50,23 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
  
  RegisterNumber: 212223230242
 
- ```
-module DFLIPFLOPNEGEDGE(D,Clock,reset,Q);
-input D,reset,Clock;
+```
+module D_FF(D,Clock,reset,Q);
+input D,Clock,reset;
 output reg Q;
-always @ (negedge Clock)
+always@(negedge Clock)//use negative edge clock for triggering condition
 if(!reset)
-Q <= 0;
+Q<=0;
 else
-Q <= D;
+Q<=D;
 endmodule
 ```
 
 **RTL LOGIC FOR FLIPFLOPS**
-![image](https://github.com/VincyJovitha01/D-FLIPDLOP-NEGEDGE/assets/147121113/8f879305-528f-4d56-9df6-39050df2125b)
+![323262445-494a2850-3223-4c9d-ac10-280ea3864bc6](https://github.com/VincyJovitha01/D-FLIPDLOP-NEGEDGE/assets/147121113/9b90b49e-2d3d-4f47-b725-379df3ab618e)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![image](https://github.com/VincyJovitha01/D-FLIPDLOP-NEGEDGE/assets/147121113/2206a13c-9f09-462a-9c42-3a5d218a6d91)
+![323262568-260dc2b3-a6f2-4a88-9feb-98256c9cdb00](https://github.com/VincyJovitha01/D-FLIPDLOP-NEGEDGE/assets/147121113/c9d23e15-1aae-4221-a628-c870286cbc1b)
 
 **RESULTS**
 
